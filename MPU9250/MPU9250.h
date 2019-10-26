@@ -270,13 +270,11 @@ public: // temporary
     uint8_t readBytes(uint8_t, uint8_t, uint8_t, uint8_t *);
     uint8_t readBytesWire(uint8_t, uint8_t, uint8_t, uint8_t *);
 
-#ifdef USE_MANGETOMETER
 public:
     void initAK8963(float * destination);
     void magCalMPU9250(float * dest1, float * dest2);
-    void readMagData  (int16_t*);
+    void readMagData(int16_t*);
     void getGres();
-#endif
 };
 
 #endif // _MPU9250_H_
