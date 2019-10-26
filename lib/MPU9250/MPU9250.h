@@ -168,17 +168,15 @@
 // Now simply define MPU9250_ADDRESS as one of the two following depending on your application
 #define MPU9250_ADDRESS_AD1 0x69  // Device address when ADO = 1
 #define MPU9250_ADDRESS_AD0 0x68  // Device address when ADO = 0
-#define AK8963_ADDRESS  0x0C   // Address of magnetometer
+#define AK8963_ADDRESS      0x0C   // Address of magnetometer
 
 
 #define READ_FLAG 0x80
 
 class MPU9250
 {
-  protected:
-
-    public: // temporary
-
+public: // temporary
+    
     // Set initial input parameters
     enum Ascale
     {
@@ -194,22 +192,22 @@ class MPU9250
       GFS_1000DPS,
       GFS_2000DPS
     };
-
+    
     enum Mscale {
       MFS_14BITS = 0, // 0.6 mG per LSB
       MFS_16BITS      // 0.15 mG per LSB
     };
 
     enum M_MODE {
-      M_8HZ = 0x02,  // 8 Hz update
+      M_8HZ   = 0x02,  // 8 Hz update
       M_100HZ = 0x06 // 100 Hz continuous magnetometer
     };
 
     
     TwoWire * _wire;						// Allows for use of various I2C ports
-    uint8_t _I2Caddr = MPU9250_ADDRESS_AD0;	// Use AD0 by default
-    int8_t _csPin; 							// SPI chip select pin
-    uint32_t _interfaceSpeed;				// Stores the desired I2C or SPi clock rate
+    uint8_t   _I2Caddr = MPU9250_ADDRESS_AD0;	// Use AD0 by default
+    int8_t    _csPin; 							// SPI chip select pin
+    uint32_t  _interfaceSpeed;				// Stores the desired I2C or SPi clock rate
 
     // Specify sensor full scale
     uint8_t Gscale = GFS_250DPS;
@@ -272,7 +270,7 @@ class MPU9250
     uint8_t readBytes(uint8_t, uint8_t, uint8_t, uint8_t *);
     uint8_t readBytesWire(uint8_t, uint8_t, uint8_t, uint8_t *);
 
-#ifdef USE_MANETOMETER
+#ifdef USE_MANGETOMETER
 public:
     void initAK8963(float * destination);
     void magCalMPU9250(float * dest1, float * dest2);
