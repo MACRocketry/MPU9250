@@ -30,3 +30,13 @@ Package Control*
 PythonTestRunner*
 Preferences.sublime-settings
 
+# ignore emacs backups/cacahe
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
