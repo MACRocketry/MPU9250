@@ -2,8 +2,8 @@
 Driver for MPU9250 10-DOF sensor chip
 
 ## Compile
-An example `main.cpp` is located in `src/`
+An example `main.cpp` is located in `examples/`
 To compile using platformio
 ~~~bash
-cd src; pio run;
+cd examples; pio run;
 ~~~
