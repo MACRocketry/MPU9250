@@ -8,12 +8,10 @@
 .*/
 **/release
 **/build/*
-Deviot/
 
 # ignore files
 *.patch
 *.o
-deviot.*
 
 # include makefiles
 !Makefile
@@ -24,19 +22,20 @@ deviot.*
 !build/makefile
 !build/*.mk
 !build/*.make
+!makerules
 
-# ignore sublime cache
-Package Control*
-PythonTestRunner*
-Preferences.sublime-settings
+# ignore / include platformio
+Deviot/
+deviot.*
+.travis.yml
 
 # ignore emacs backups/cacahe
 *~
 \#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
+/.emacs.*
 *.elc
 auto-save-list
 tramp
 .\#*
+
 
