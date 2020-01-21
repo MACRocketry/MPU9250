@@ -55,7 +55,7 @@ enum t_axisOrder {
 #define INT_50US_PULSE  0
 
 #define MAX_DMP_SAMPLE_RATE 200 // Maximum sample rate for the DMP FIFO (200Hz)
-#define FIFO_BUFFER_SIZE 512 // Max FIFO buffer size
+#define FIFO_BUFFER_SIZE 	512 // Max FIFO buffer size
 
 const signed char defaultOrientation[9] = {
 	1, 0, 0,
@@ -67,7 +67,7 @@ const signed char defaultOrientation[9] = {
 #define ORIENT_REVERSE_PORTRAIT  2
 #define ORIENT_REVERSE_LANDSCAPE 3
 
-class MPU9250_DMP 
+class mpu9250DMP 
 {
 public:
 	int ax, ay, az;
@@ -79,7 +79,7 @@ public:
 	float pitch, roll, yaw;
 	float heading;
 	
-	MPU9250_DMP();
+	mpu9250DMP();
 	
 	// begin(void) -- Verifies communication with the MPU-9250 and the AK8963,
 	// and initializes them to the default state:
