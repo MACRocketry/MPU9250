@@ -17,10 +17,10 @@ Supported Platforms:
 *************************************************************/
 #include <SparkFunMPU9250-DMP.h>
 
-#define SerialPort SerialUSB
+#define SerialPort Serial
 
-MPU9250_DMP imu;
-
+mpu9250DMP imu;
+void printIMUData(void);
 void setup() 
 {
   SerialPort.begin(115200);
